@@ -19,11 +19,9 @@ class App extends Component {
           <li> Wait a few seconds before taking another breath </li>
         </ol>
 
-      <button className="toggle-button"><ToggleButton /></button>
+      <div id="toggle-button"><ToggleButton /></div>
 
       </div>
-
-      <div className='Breathe-button'></div>
 
       </div>
     );
@@ -35,22 +33,31 @@ export default App;
 var ToggleButton = React.createClass({
   getInitialState: function(){
     return {
-      text: 'Stop'
+      text: 'Start'
     };
   },
   handleClick: function(){
-    if (this.state.text === 'Stop'){
-      this.setState({text: 'Start'});
-    } else {
+    if (this.state.text === 'Start'){
       this.setState({text: 'Stop'});
+    } else {
+      this.setState({text: 'Start'});
     }
   },
   render: function() {
-    return <div>
-    <button className={this.state.text} onClick={this.handleClick}>{this.state.text}</button>
-    </div>
-  }
-})
+    var partial;
+    if (this.state.text === 'Stop') {
+      partial = <div className='Breathe-button'></div>
+    }
+    return (
+        <div>
+          <div className={this.state.text} onClick={this.handleClick}>{this.state.text}</div>
+          <p>
+          {partial}
+          </p>
+        </div>
+      );
+    }
+});
 
 // class Toggle extends React.Component {
 //   constructor(props) {
@@ -74,15 +81,13 @@ var ToggleButton = React.createClass({
 //   }
 // }
 
-
-
-// class Breathe extends React.Component {
-//   constructor() {
-//     super()
-//   }
-//   render(){
-//     return(
-//       <div className='Breathe-button-animate'></div>
-//     )
-//   }
-// }
+class startBreathe extends React.Component {
+  constructor() {
+    super()
+  }
+  render(){
+    return(
+      <div className='Breathe-button'></div>
+    )
+  }
+}
