@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="app">
+          <style>
+            @import url('https://fonts.googleapis.com/css?family=Vollkorn');
+          </style>
 
-      <div className="App-header">
-      <h2>Breathe Easy</h2>
-      </div>
-
-      <div className="Text">
-        <ol>
-          <li> Take a slow breath in through the nose, breathing into your lower belly (for about 4 seconds)</li>
-          <li> Hold your breath for 1 or 2 seconds </li>
-          <li> Exhale slowly through the mouth (for about 4 seconds) </li>
-          <li> Wait a few seconds before taking another breath </li>
-        </ol>
-
+          <div className="app-header">
+            <h2>~Breathe Easy~</h2>
+          </div>
+    
+          <div className="text">
+              <ol>
+                  <li> Take a slow breath in through the nose, breathing into your lower belly (for about <i>four seconds</i>)</li>
+                  <li> Hold your breath for one or <i>two seconds</i> </li>
+                  <li> Exhale slowly through the mouth (for about <i>four seconds</i>) </li>
+                  <li> Wait a few seconds before taking another breath </li>
+              </ol>
+          </div>
+                                                                                                
       <div id="toggle-button"><ToggleButton /></div>
-
-      </div>
 
       </div>
     );
@@ -33,20 +34,20 @@ export default App;
 var ToggleButton = React.createClass({
   getInitialState: function(){
     return {
-      text: 'Start'
+      text: 'start'
     };
   },
   handleClick: function(){
-    if (this.state.text === 'Start'){
-      this.setState({text: 'Stop'});
+    if (this.state.text === 'start'){
+      this.setState({text: 'stop'});
     } else {
-      this.setState({text: 'Start'});
+      this.setState({text: 'start'});
     }
   },
   render: function() {
     var partial;
-    if (this.state.text === 'Stop') {
-      partial = <div className='Breathe-button'></div>
+    if (this.state.text === 'stop') {
+      partial = <div className='breathe-button'></div>
     }
     return (
         <div>
@@ -58,36 +59,3 @@ var ToggleButton = React.createClass({
       );
     }
 });
-
-// class Toggle extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {isToggleOn: true};
-//     this.handleClick = this.handleClick.bind(this);
-//   }
-//
-//   handleClick() {
-//     this.setState(prevState => ({
-//       isToggleOn: !prevState.isToggleOn
-//     }));
-//   }
-//
-//   render() {
-//     return (
-//       <button onClick={this.handleClick}>
-//       {this.state.isToggleOn ? '.Start' : '.Stop'}
-//       </button>
-//     );
-//   }
-// }
-
-class startBreathe extends React.Component {
-  constructor() {
-    super()
-  }
-  render(){
-    return(
-      <div className='Breathe-button'></div>
-    )
-  }
-}
