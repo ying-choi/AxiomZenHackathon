@@ -12,7 +12,7 @@ class App extends Component {
           <div className="app-header">
             <h2>~Breathe Easy~</h2>
           </div>
-    
+
           <div className="text">
               <ol>
                   <li> Take a slow breath in through the nose, breathing into your lower belly (for about <i>four seconds</i>)</li>
@@ -21,7 +21,7 @@ class App extends Component {
                   <li> Wait a few seconds before taking another breath </li>
               </ol>
           </div>
-                                                                                                
+
       <div id="toggle-button"><ToggleButton /></div>
 
       </div>
