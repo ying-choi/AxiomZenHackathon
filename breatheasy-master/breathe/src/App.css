@@ -3,7 +3,7 @@ html {
      background: -webkit-linear-gradient(#F5F5F5, #FFE4E1);
 }
 
-h2, li {
+h2, li, p {
     font-family: Vollkorn;
 }
 
@@ -12,7 +12,7 @@ h2 {
     letter-spacing: 1rem;
 }
 
-li {
+li, p {
     font-size: 1.15rem;
     color: #696969;
 }
@@ -40,7 +40,7 @@ ol {
 }
 
 .stop {
-    background-color: red;
+    background-color: #A52A2A;
     border: none;
     color: white;
     padding: 10px 32px;
@@ -53,7 +53,7 @@ ol {
 }
 
 .start {
-    background-color: green;
+    background-color: #2E8B57;
     border: none;
     color: white;
     padding: 10px 32px;
@@ -67,6 +67,7 @@ ol {
 
 .breathe-button
 {
+  margin-top:2rem;
   width:100px;
   height:100px;
   border-radius: 50%;
@@ -98,7 +99,7 @@ ol {
 }
 
 .text {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 @keyframes fade {
