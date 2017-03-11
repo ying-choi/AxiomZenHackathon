@@ -73,7 +73,7 @@ ol {
   border-radius: 50%;
   background: linear-gradient(to bottom right, red, yellow);
   display: inline-block;
-  animation: introFade 3s forwards,
+  animation: introFade 7s forwards,
     fade 9s normal infinite;
 }
 

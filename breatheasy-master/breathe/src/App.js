@@ -23,7 +23,7 @@ class App extends Component {
               <p>Click the start button.</p>
           </div>
 
-      <div className="toggle-button-class"><ToggleButton /></div>
+      <div className="toggle-button-class" ><ToggleButton /></div>
 
       </div>
     );
