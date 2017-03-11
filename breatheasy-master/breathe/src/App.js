@@ -12,7 +12,7 @@ class App extends Component {
           <div className="app-header">
             <h2>~Breathe Easy~</h2>
           </div>
-
+    
           <div className="text">
               <ol>
                   <li> Take a slow breath in through the nose, breathing into your lower belly (for about <i>four seconds</i>)</li>
@@ -21,9 +21,8 @@ class App extends Component {
                   <li> Wait a few seconds before taking another breath </li>
               </ol>
           </div>
-
-
-          <div className="breathe-button"></div>
+                                                                                                
+      <div id="toggle-button"><ToggleButton /></div>
 
       </div>
     );
@@ -31,3 +30,32 @@ class App extends Component {
 }
 
 export default App;
+
+var ToggleButton = React.createClass({
+  getInitialState: function(){
+    return {
+      text: 'start'
+    };
+  },
+  handleClick: function(){
+    if (this.state.text === 'start'){
+      this.setState({text: 'stop'});
+    } else {
+      this.setState({text: 'start'});
+    }
+  },
+  render: function() {
+    var partial;
+    if (this.state.text === 'stop') {
+      partial = <div className='breathe-button'></div>
+    }
+    return (
+        <div>
+          <div className={this.state.text} onClick={this.handleClick}>{this.state.text}</div>
+          <p>
+          {partial}
+          </p>
+        </div>
+      );
+    }
+});
