@@ -49,14 +49,11 @@
     cursor: pointer;
 }
 
-.Breathe-button-static {
+.Breathe-button {
   width:100px;
   height:100px;
   border-radius: 50%;
   background:orange;
-}
-
-.Breath-button-animate {
   display: inline-block;
   animation: fade 10s forwards;
   -webkit-animation: fade 10s forwards;

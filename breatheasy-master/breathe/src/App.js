@@ -12,20 +12,18 @@ class App extends Component {
       </div>
 
       <div className="Text">
-      <ol>
-      <li> Take a slow breath in through the nose, breathing into your lower belly (for about 4 seconds)</li>
-      <li> Hold your breath for 1 or 2 seconds </li>
-      <li> Exhale slowly through the mouth (for about 4 seconds) </li>
-      <li> Wait a few seconds before taking another breath </li>
-      </ol>
+        <ol>
+          <li> Take a slow breath in through the nose, breathing into your lower belly (for about 4 seconds)</li>
+          <li> Hold your breath for 1 or 2 seconds </li>
+          <li> Exhale slowly through the mouth (for about 4 seconds) </li>
+          <li> Wait a few seconds before taking another breath </li>
+        </ol>
 
       <button className="toggle-button"><ToggleButton /></button>
 
-      <div className="Breathe-button-static"> </div>
-
       </div>
 
-
+      <div className='Breathe-button'></div>
 
       </div>
     );
@@ -33,6 +31,26 @@ class App extends Component {
 }
 
 export default App;
+
+var ToggleButton = React.createClass({
+  getInitialState: function(){
+    return {
+      text: 'Stop'
+    };
+  },
+  handleClick: function(){
+    if (this.state.text === 'Stop'){
+      this.setState({text: 'Start'});
+    } else {
+      this.setState({text: 'Stop'});
+    }
+  },
+  render: function() {
+    return <div>
+    <button className={this.state.text} onClick={this.handleClick}>{this.state.text}</button>
+    </div>
+  }
+})
 
 // class Toggle extends React.Component {
 //   constructor(props) {
@@ -56,35 +74,15 @@ export default App;
 //   }
 // }
 
-var ToggleButton = React.createClass({
-  getInitialState: function(){
-    return {
-      text: 'Stop'
-    };
-  },
-  handleClick: function(){
-    if (this.state.text === 'Stop'){
-      this.setState({text: 'Start'});
-    } else {
-      this.setState({text: 'Stop'});
-    }
-  },
-  render: function() {
-    return <div>
-    <button className={this.state.text} onClick={this.handleClick}>{this.state.text}</button>
-    {this.state.text === 'Start' && < Breathe />}
-    </div>
-  }
 
-})
 
-class Breathe extends React.Component {
-  constructor() {
-    super()
-  }
-  render(){
-    return(
-      <div className='Breathe-button-animate'></div>
-    )
-  }
-}
+// class Breathe extends React.Component {
+//   constructor() {
+//     super()
+//   }
+//   render(){
+//     return(
+//       <div className='Breathe-button-animate'></div>
+//     )
+//   }
+// }
