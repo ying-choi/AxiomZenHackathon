@@ -1,29 +1,50 @@
 html {
     height: 100%;
-    background: #F5F5F5;
+     background: -webkit-linear-gradient(#F5F5F5, #FFE4E1);
 }
 
-.App {
+h2, li {
+    font-family: Vollkorn;
+}
+
+h2 {
+    font-size: 35px;
+    letter-spacing: 1rem;
+}
+
+li {
+    font-size: 1.15rem;
+    color: #696969;
+}
+
+.app {
   text-align: center;
 }
 
-.App-header {
-  background-color: #E6E6FA;
+.app-header {
+  background-image: url(http://stlawyers.ca/wp-content/uploads/2017/01/light-blue-background-wallpaper-1.jpg);
   height: 75px;
   padding: 20px;
-  color: #4B0082;
+  color: #9932CC;
+  padding-bottom: 2rem;
+  border-bottom: 3px dotted white;
 }
 
-.App-intro {
+.app-intro {
   font-size: large;
 }
 
-.Breathe-button
+ol {
+    display: inline-block;
+    text-align: left;
+}
+
+.breathe-button
 {
   width:100px;
   height:100px;
   border-radius: 50%;
-  background:orange;
+  background: linear-gradient(to bottom right, red, yellow);
 
   display: inline-block;
   animation: fade 10s forwards;
@@ -34,6 +55,10 @@ html {
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
+}
+
+.text {
+    padding-bottom: 2rem;
 }
 
 @keyframes fade {
