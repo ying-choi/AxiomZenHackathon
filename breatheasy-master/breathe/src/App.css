@@ -47,14 +47,29 @@ ol {
   background: linear-gradient(to bottom right, red, yellow);
 
   display: inline-block;
-  animation: fade 10s forwards;
-  -webkit-animation: fade 10s forwards;
-  -moz-animation: fade 10s forwards;
-  -o-animation: fade 10s forwards;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
+  animation: introFade 3s forwards,
+    fade 9s normal infinite;
+}
+
+@keyframes introFade {
+  from {
+    opacity: 0;
+    width:300px;height:300px;
+  }
+
+  to {
+    opacity: 1;
+    width:300px;height:300px;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
 }
 
 .text {
@@ -62,9 +77,12 @@ ol {
 }
 
 @keyframes fade {
-0%   {width:300px;height:300px}
-50%   {width:100px;height:100px}
-100% {width:300px;height:300px}
+0%   {width:225px;height:225px}
+9% {width:250px;height:250px}
+47.75%   {width:100px;height:100px}
+56.75%   {width:100px;height:100px}
+96.5% {width:225px;height:225px}
+100% {width:225px;height:225px}
 }
 
 @-webkit-keyframes fade {
