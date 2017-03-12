@@ -77,6 +77,11 @@ ol {
     fade 9s normal infinite;
 }
 
+.intro {
+    font-size: 1.25rem;
+    padding: none;
+}
+
 @keyframes introFade {
   from {
     opacity: 0;
